@@ -15,9 +15,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.materialswitch.MaterialSwitch;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.Calendar;
 import java.util.Locale;
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         
         btnSubmit.setOnClickListener(v -> {
             if (validateForm()) {
-                submitForm();
+                askForConfirmation();
             }
         });
 
@@ -153,8 +155,21 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    private void askForConfirmation() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.confirm_title)
+                .setMessage(R.string.confirm_message)
+                .setPositiveButton(R.string.yes, (dialog, which) -> submitForm())
+                .setNegativeButton(R.string.no, null)
+                .show();
+    }
+
     private void submitForm() {
         tvSummary.setText(buildSummary());
+
+        Snackbar.make(findViewById(R.id.main), R.string.sent, Snackbar.LENGTH_LONG)
+                .setAction(R.string.undo, v -> tvSummary.setText(""))
+                .show();
     }
 
     private String buildSummary() {
