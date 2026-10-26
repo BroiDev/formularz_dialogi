@@ -239,6 +239,14 @@
             android:layout_marginTop="16dp"
             android:text="@string/btn_submit" />
 
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/btn_clear"
+            style="?attr/materialButtonOutlinedStyle" />
+
         <TextView
             android:id="@+id/tvSummary"
             android:layout_width="match_parent"

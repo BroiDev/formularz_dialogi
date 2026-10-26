@@ -40,4 +40,9 @@
 
     <string name="sent">Odpowiedzi wysłane</string>
     <string name="undo">Cofnij</string>
+
+    <string name="btn_clear">WYCZYŚĆ FORMULARZ</string>
+    <string name="clear_confirm_title">Wyczyścić formularz?</string>
+    <string name="clear_confirm_message">Wszystkie wprowadzone dane zostaną trwale usunięte.</string>
+    <string name="cleared">Formularz wyczyszczony</string>
 </resources>
