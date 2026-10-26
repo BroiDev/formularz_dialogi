@@ -1,44 +1,43 @@
 <resources>
-    <string name="app_name">Zapisy na kurs</string>
-    <string name="header">Zapisy na kurs</string>
-    <string name="label_name">Imię i nazwisko</string>
-    <string name="label_email">Adres e-mail</string>
-    <string name="label_birth_date">Data urodzenia</string>
-    <string name="label_course">Kurs</string>
-    <string name="label_mode">Tryb zajęć</string>
-    <string name="label_level">Poziom zaawansowania</string>
-    <string name="hint_name">Jan Kowalski</string>
-    <string name="hint_email">jan@przyklad.pl</string>
-    <string name="btn_pick_date">Wybierz datę</string>
-    <string name="mode_onsite">Stacjonarny</string>
-    <string name="mode_remote">Zdalny</string>
-    <string name="newsletter">Chcę dostawać newsletter</string>
-    <string name="terms">Akceptuję regulamin</string>
-    <string name="btn_submit">WYŚLIJ ZGŁOSZENIE</string>
+    <string name="app_name">Ankieta satysfakcji z systemu Windows</string>
+    <string name="header">Ankieta satysfakcji z systemu Windows</string>
+    <string name="question_1">Jak bardzo jesteś zadowolony z działania systemu Windows na swoim urządzeniu?</string>
+    <string name="question_2">Jak duża jest szansa, że podczas rozmowy ze znajomymi polecisz im system Windows?</string>
+    <string name="question_3">Czy komputer uruchamia się i działa zadowalająco szybko?</string>
+    <string-array name="question_3_answers">
+        <item>-- wybierz odpowiedź --</item>
+        <item>Tak</item>
+        <item>Nie</item>
+        <item>Mam zastrzeżenia</item>
+    </string-array>
+    <string name="question_4">Czy doświadczasz problemów ze stabilnością systemu (np. niebieskie ekrany śmierci - BSOD, zawieszanie)?</string>
+    <string-array name="question_4_answers">
+        <item>-- wybierz odpowiedź --</item>
+        <item>Nigdy</item>
+        <item>Czasami</item>
+        <item>Często</item>
+    </string-array>
+    <string name="question_5">Czy posiadasz wszystkie aplikacje i narzędzia niezbędne do codziennej pracy?</string>
+    <string name="question_5_yes">Tak</string>
+    <string name="question_5_no">Nie</string>
+    <string name="question_6">Jak oceniasz wygodę pracy na przydzielonym laptopie / komputerze?</string>
+    <string name="question_7">Jak oceniasz pomoc działu IT w rozwiązywaniu problemów z systemem Windows?</string>
+    <string name="question_8">Co moglibyśmy poprawić w działaniu Twojego systemu lub wsparcia technicznego?</string>
+    <string name="hint_question_8">(i tak tego nie przeczytamy)</string>
+    <string name="newsletter">Chcę dostawać newsletter i kocham Billa Gatesa</string>
+    <string name="btn_submit">WYŚLIJ ODPOWIEDZI</string>
 
-    <string name="error_name">Podaj imię i nazwisko</string>
-    <string name="error_email">Niepoprawny adres e-mail</string>
-    <string name="error_date">Wybierz datę urodzenia</string>
-    <string name="error_course">Wybierz kurs z listy</string>
-    <string name="error_mode">Zaznacz tryb zajęć</string>
+    <string name="error_required">To pole jest wymagane</string>
+    <string name="error_spinner">Wybierz jedną z opcji</string>
+    <string name="error_email">Podaj poprawny adres e-mail</string>
+    <string name="error_radio">Odpowiedz na pytanie 5</string>
+    <string name="hint_newsletter_email">Twój adres e-mail</string>
 
-    <string name="confirm_title">Wysłać zgłoszenie?</string>
+    <string name="confirm_title">Wysłać odpowiedzi?</string>
     <string name="confirm_message">Sprawdź dane przed wysłaniem. Tej operacji nie da się cofnąć po zamknięciu aplikacji.</string>
     <string name="yes">Tak, wyślij</string>
     <string name="no">Popraw</string>
 
-    <string name="sent">Zgłoszenie wysłane</string>
+    <string name="sent">Odpowiedzi wysłane</string>
     <string name="undo">Cofnij</string>
-
-    <string name="summary_format">%1$s\n%2$s\nUr. %3$s\nKurs: %4$s\nTryb: %5$s\nPoziom: %6$d/10\nNewsletter: %7$s</string>
-    <string name="yes_short">tak</string>
-    <string name="no_short">nie</string>
-
-    <string-array name="courses">
-        <item>-- wybierz kurs --</item>
-        <item>Programowanie w Javie</item>
-        <item>Aplikacje mobilne</item>
-        <item>Bazy danych</item>
-        <item>Sieci komputerowe</item>
-    </string-array>
 </resources>
