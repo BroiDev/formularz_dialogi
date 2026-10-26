@@ -2,11 +2,15 @@ package com.broidev.formularz_dialogi;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText etName, etEmail;
     private Button btnBirthDate, btnSubmit;
+    private Spinner spCourse;
     private RadioGroup rgMode;
     private SeekBar sbLevel;
     private TextView tvLevelValue, tvSummary;
@@ -37,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         btnBirthDate = findViewById(R.id.btnBirthDate);
         btnSubmit = findViewById(R.id.btnSubmit);
+        spCourse = findViewById(R.id.spCourse);
         rgMode = findViewById(R.id.rgMode);
         sbLevel = findViewById(R.id.sbLevel);
         tvLevelValue = findViewById(R.id.tvLevelValue);
@@ -44,8 +50,16 @@ public class MainActivity extends AppCompatActivity {
         swNewsletter = findViewById(R.id.swNewsletter);
         cbTerms = findViewById(R.id.cbTerms);
 
+        setUpCourseSpinner();
         setUpListeners();
         tvLevelValue.setText(String.valueOf(sbLevel.getProgress()));
+    }
+
+    private void setUpCourseSpinner() {
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this, R.array.courses, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spCourse.setAdapter(adapter);
     }
 
     private void setUpListeners() {
@@ -67,6 +81,18 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) { }
+        });
+
+        spCourse.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position > 0) {
+                    tvSummary.setText("");
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) { }
         });
     }
 
@@ -105,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
                 etName.getText().toString().trim(),
                 etEmail.getText().toString().trim(),
                 birthDate,
+                spCourse.getSelectedItem().toString(),
                 mode,
                 sbLevel.getProgress(),
                 newsletter);
