@@ -15,6 +15,13 @@
     <string name="newsletter">Chcę dostawać newsletter</string>
     <string name="terms">Akceptuję regulamin</string>
     <string name="btn_submit">WYŚLIJ ZGŁOSZENIE</string>
+
+    <string name="error_name">Podaj imię i nazwisko</string>
+    <string name="error_email">Niepoprawny adres e-mail</string>
+    <string name="error_date">Wybierz datę urodzenia</string>
+    <string name="error_course">Wybierz kurs z listy</string>
+    <string name="error_mode">Zaznacz tryb zajęć</string>
+
     <string name="summary_format">%1$s\n%2$s\nUr. %3$s\nKurs: %4$s\nTryb: %5$s\nPoziom: %6$d/10\nNewsletter: %7$s</string>
     <string name="yes_short">tak</string>
     <string name="no_short">nie</string>
